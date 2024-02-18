@@ -7,7 +7,7 @@ const addedUrls = new Set();
 function createCard(title, url) {
   if (!addedUrls.has(url) && addedUrls.size < 3) {
     const card = document.createElement('div');
-    const name = document.createElement('h2');
+    const name = document.createElement('h3');
     name.textContent = title;
     const image = document.createElement('img'); // Corregido: cambia 'gif' por 'img'
     image.src = url;
