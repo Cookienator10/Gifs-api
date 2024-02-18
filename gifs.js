@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-<<<<<<< HEAD
   fetchRM();
 });
 
@@ -10,7 +9,7 @@ function createCard(title, url) {
     const card = document.createElement('div');
     const name = document.createElement('h2');
     name.textContent = title;
-    const image = document.createElement('img');
+    const image = document.createElement('img'); // Corregido: cambia 'gif' por 'img'
     image.src = url;
     image.alt = 'GIF';
     card.appendChild(name);
@@ -33,35 +32,5 @@ function fetchRM() {
     })
     .catch(err => console.error('Error: ', err));
 }
-=======
-    fetchRM();
-  });
+
   
-  function createCard( gif ) {
-    const card = document.createElement('div');
-  
-    const image = document.createElement('gif');
-    image.src = gif;
-    image.alt = 'Gifs images';
-  
-  
-    card.appendChild(gif);
-+  
-    document.getElementById('cardContainer').appendChild(card);
-  }
-  
-  function fetchRM() {
-    const options = { method: 'GET' };
-  
-    fetch('https://rickandmortyapi.com/api/character', options)
-      .then(response => response.json())
-      .then(data => {
-        data.results.forEach(result => {
-          const gif = result.gif;
-  
-          createCard( gif);
-        });
-      })
-      .catch(err => console.error('Error: ', err));
-  }
->>>>>>> ba9a523c151c9decec406c8f99f6813ba6112227
